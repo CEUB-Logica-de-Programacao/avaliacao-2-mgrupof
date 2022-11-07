@@ -22,9 +22,15 @@
 # ```
 
 def q3(prices):
-    # Escreva seu código aqui
-    pass
-
+    preços = []
+    
+    while len(prices) > 0:
+        x = slice(prices.index(min(prices)), len(prices))
+        a = prices[x]
+        preços.append(max(a) - a[0])
+        prices.remove(min(prices))
+        
+    return max(preços)
 
 if __name__ == '__main__':
-    print(q3([7, 1, 5, 3, 6, 4]))
+    print(q3([7,5,2,6,3,4,1]))
