@@ -19,17 +19,4 @@
 # Output: ["Bob","Alice","Bob"]
 # ```
 
-names = []
-heights = []
-total = []
-x = int(input('Digite a quantidade de pessoas a serem adicionadas: '))
-for i in range(0,x):
-  nome = input('Digite o nome da pessoa: ')
-  altura = input('Digite a altura da pessoa em cm (ex: 1,79 = 179): ')
-  names.append(nome)
-  heights.append(altura)
-for i in range(x):
-  tuple = (names[i],heights[i])
-  total.append(tuple)
-sorted(total, key=lambda names: names[1])
-print(sorted(total, key=lambda names: names[1], reverse=True))
+
