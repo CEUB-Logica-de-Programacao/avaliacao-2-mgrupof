@@ -23,11 +23,17 @@
 # * C pode ser colocado antes de D (500) e M (1000) para fazer 400 e 900.
 #
 # Dado um numeral romano, converta-o para um número inteiro.
-
 def q4(numeral):
-    # Escreva seu código aqui
-    pass
-
-
+    dict_num = {"I": 1, "V": 5, "X": 10,"L": 50, "C": 100, "D": 500, "M": 1000}
+    v = 0
+    x = 0
+    for romano in numeral[::-1]:            
+        valor = dict_num[romano]
+        if valor >= x:
+            v += valor
+            x = valor
+        else:
+            v -= valor
+    return v
 if __name__ == '__main__':
-    print(q4('MCMXCIV'))  # 1994
+    print(q4('MCMXCIV'))

@@ -18,11 +18,23 @@
 # Input: names = ["Alice","Bob","Bob"], heights = [155,185,150]
 # Output: ["Bob","Alice","Bob"]
 # ```
-
 def q1(names, heights):
     # Escreva seu código aqui
-    pass
-
-
+    dict = {}
+    for i in range(0,len(names)):
+        dict[names[i]] = heights[i]
+    def y():
+        d = {}
+        lista = []
+        d2 = sorted(dict.values(), reverse= True)
+        for i in d2:
+            for j in dict.keys():
+                if dict[j] == i:
+                    d[j] = dict[j]
+        for j in d.keys():
+            lista.append(j)
+        return lista
+    return y()
 if __name__ == '__main__':
     print(q1(["Mary", "John", "Emma"], [180, 165, 170]))
+
