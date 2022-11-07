@@ -23,11 +23,19 @@
 # 3. 2 degraus + 1 degrau
 # ```
 
-
 def q2(n):
     # Escreva seu código aqui
-    pass
-
-
+    n1 = 0
+    n2 = 1
+    count = 0
+    lista = {'n':0}
+    while count < n:
+        x = n1 + n2
+        n1 = n2 
+        n2 = x
+        count += 1
+        lista.update({'n': x})
+    for d in lista.values():
+        return d
 if __name__ == '__main__':
     print(q2(2))
